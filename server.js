@@ -7,9 +7,9 @@ const cors = require('cors');
 let app = express();
 let superagen = require('superagent')
 const pg = require("pg")
-// const client = new pg.Client({ connectionString: process.env.DATABASE_URL,   ssl: { rejectUnauthorized: false } });
+const client = new pg.Client({ connectionString: process.env.DATABASE_URL,   ssl: { rejectUnauthorized: false } });
 
-const client = new pg.Client(process.env.Database_url);
+// const client = new pg.Client(process.env.Database_url);
 app.use(cors());
 
 const PORT = process.env.PORT;
